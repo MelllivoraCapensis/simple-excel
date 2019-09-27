@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Simple Excel</title>
+	<link rel="stylesheet" href="source/css/index.css">
+</head>
+<body>
+	<div id="table">
+		<table>
+			<tbody>
+				<tr>
+					<td></td>
+					<th v-for="title in columnTitles">{{ title }}</th>
+				</tr>
+				<tr v-for="i in rowNum">
+					<th>{{ i }}</th>
+					<td v-for="j in columnTitles.length">
+						<input class="cell">
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+	<script src="source/js/index.js"></script>
+</body>
+</html>
